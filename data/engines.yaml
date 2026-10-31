@@ -1,0 +1,73 @@
+# Engine configurations. Models change fast - verify against provider docs
+# before running. API keys are read from environment variables, never stored here.
+# Engines without a key are skipped automatically, so keep unused ones enabled.
+#
+# CN engines:
+#   zhipu    - builtin web_search tool, glm-4-flash is FREE tier
+#   deepseek - web search ONLY via /v1/responses endpoint (chat/completions
+#              rejects the web_search tool with 400)
+#   qwen     - OpenAI-compatible mode + enable_search param (Aliyun Bailian)
+# Western engines (access may require network configuration in some regions):
+#   chatgpt / perplexity / gemini (gemini free tier has NO search-grounding quota)
+engines:
+  zhipu:
+    # VERIFIED 2026-10-06 via probe_zhipu.py: glm-4-flash does NOT execute the
+    # web_search tool (no web_search/tool_calls in response, answers say "As of
+    # my last update"). Kept deliberately as the MEMORY-layer engine - see
+    # DESIGN.md sec.3 "memory vs search" two-layer model. Do not quote pooled
+    # mention rates without the per-engine split.
+    type: openai_compat
+    base_url: https://open.bigmodel.cn/api/paas/v4
+    model: glm-4-flash          # free; check docs.bigmodel.cn for current names
+    api_key_env: ZHIPU_API_KEY
+    enabled: true
+    extra_body:
+      tools:
+        - type: web_search
+          web_search:
+            enable: true
+            search_result: true
+
+  deepseek:
+    type: openai_responses
+    base_url: https://api.deepseek.com/v1
+    model: deepseek-v4-flash    # verify at api-docs.deepseek.com
+    api_key_env: DEEPSEEK_API_KEY
+    enabled: true
+
+  qwen:
+    type: openai_compat
+    base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+    model: qwen-plus
+    api_key_env: DASHSCOPE_API_KEY
+    enabled: true
+    extra_body:
+      enable_search: true
+
+  chatgpt:
+    type: openai_responses
+    model: gpt-5.1            # adjust to the current model at run time
+    api_key_env: OPENAI_API_KEY
+    enabled: true
+
+  perplexity:
+    type: openai_compat
+    base_url: https://api.perplexity.ai
+    model: sonar-pro
+    api_key_env: PERPLEXITY_API_KEY
+    enabled: true
+
+  gemini:
+    type: gemini
+    # "-latest" alias never retires; lite = cheapest with search grounding.
+    # NOTE: free-tier keys have NO quota for search grounding (429) - billing required
+    model: gemini-flash-lite-latest
+    api_key_env: GEMINI_API_KEY
+    enabled: true
+
+  grok:
+    type: openai_compat
+    base_url: https://api.x.ai
+    model: grok-4
+    api_key_env: XAI_API_KEY
+    enabled: false

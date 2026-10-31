@@ -1,0 +1,41 @@
+# Question set design (see DESIGN.md section 4).
+# Category: smart home cleaning devices (robot vacuums / floor washers).
+# Discovery queries are generated from seeds below (subcategory x intent x
+# qualifier x budget), capped at max_questions. Brand-level questions are
+# rendered from brand_templates with {brand} / {competitor} / {category}.
+category_term: "smart home cleaning devices"
+
+discovery:
+  max_questions: 40
+  intents: ["best", "top rated", "most recommended"]
+  subcategories:
+    - "robot vacuum"
+    - "robot vacuum and mop combo"
+    - "self-emptying robot vacuum"
+    - "cordless stick vacuum"
+    - "wet dry vacuum"
+    - "smart floor washer"
+  qualifiers:
+    - "for pet hair"
+    - "for large homes"
+    - "for thick carpet"
+    - "for hardwood floors"
+    - "for multiple pets"
+    - "on a budget"
+  budget_prices: [300, 500, 800]
+
+brand_templates:
+  comparison:
+    - "{brand} vs {competitor}"
+    - "alternatives to {brand}"
+    - "{brand} or {competitor}, which is better"
+    - "is {brand} better than {competitor}"
+  trust:
+    - "Is {brand} legit?"
+    - "Is {brand} a good brand?"
+    - "Is {brand} trustworthy?"
+  price_longtail:
+    - "Is {brand} worth the money?"
+    - "cheaper alternatives to {brand}"
+  freshness:
+    - "What's new from {brand} in 2025-2026?"

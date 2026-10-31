@@ -1,0 +1,183 @@
+# Brand sample for the pilot category: smart home cleaning devices.
+# Structure (DESIGN.md sec.2): 8 leaders / ~20 growth / ~12 emerging,
+# intl control group 6-8 mixed in. Xiaomi deliberately excluded (mega-platform
+# brand, would dominate mentions and dilute the DTC story).
+#
+# STATUS MARKERS:
+#   # [ok]      domain double-checked shape, still verify before production
+#   # [verify]  domain from memory/indirect source - MUST verify
+# Sourcing notes per entry reference: web search 2026-10 (Helium10 TikTok top20,
+# IDC/AmCham reports, TikTok Shop featured brands, CES coverage).
+category: "smart home cleaning devices"
+brands:
+  # ============ CN leaders ============
+  - name: Roborock          # [ok] IDC 2025 global #1, 21.7% share
+    domain: roborock.com
+    tier: leader
+    country: CN
+    competitors: [Ecovacs, Dreame]
+  - name: Ecovacs           # [ok] IDC 2025 global #2
+    domain: ecovacs.com
+    tier: leader
+    country: CN
+    competitors: [Roborock, Dreame]
+    aliases: [Deebot]       # product-line name used in Western answers
+  - name: Dreame            # [ok] IDC 2025 global #3, 10.5% share +101.9% YoY
+    domain: dreame.com
+    tier: leader
+    country: CN
+    competitors: [Roborock, Narwal]
+  - name: Tineco            # [verify] AmCham: top seller on Amazon
+    domain: tineco.com
+    tier: leader
+    country: CN
+    competitors: [Dreame, Bissell]
+
+  # ============ CN growth (Amazon-native / established mid-tier) ============
+  - name: Narwal            # [ok] IDC 2025 top-5 global, displaced iRobot
+    domain: narwal.com
+    tier: growth
+    country: CN
+    competitors: [Dreame, Roborock]
+  - name: Yeedi             # [ok] Ecovacs sub-brand
+    domain: yeedi.com
+    tier: growth
+    country: CN
+    competitors: [Ecovacs]
+  - name: SwitchBot         # [ok]
+    domain: switch-bot.com
+    tier: growth
+    country: CN
+    competitors: [Roborock]
+  - name: Eufy              # [ok] Anker clean line, N.A. stick vacuum growth
+    domain: eufy.com
+    tier: growth
+    country: CN
+    competitors: [iRobot, Roborock]
+  - name: iLife             # [verify]
+    domain: iliferobot.com
+    tier: growth
+    country: CN
+    competitors: [Eufy, iRobot]
+  - name: Proscenic         # [verify]
+    domain: proscenic.com
+    tier: growth
+    country: CN
+    competitors: [iLife, Ecovacs]
+  - name: Lefant            # [verify]
+    domain: lefant.com
+    tier: growth
+    country: CN
+    competitors: [iLife, Eufy]
+  - name: Neatsvor          # [verify]
+    domain: neatsvor.com
+    tier: growth
+    country: CN
+    competitors: [Lefant, iLife]
+  - name: Coredy            # [verify]
+    domain: coredy.com
+    tier: growth
+    country: CN
+    competitors: [Neatsvor, Lefant]
+  - name: AIRROBO           # [verify]
+    domain: airrobo.com
+    tier: growth
+    country: CN
+    competitors: [Eufy, iLife]
+  - name: UWANT             # [ok] uwanthome.com confirmed; floor washer leader,
+    domain: uwanthome.com   # Suzhou, strategic funding 2026-03
+    tier: growth
+    country: CN
+    competitors: [Tineco, Bissell]
+  - name: Zigma             # [ok] zigma.com confirmed via product manual;
+    domain: zigma.com       # Grit Technology smart-home brand
+    tier: growth
+    country: CN
+    competitors: [Roborock, iRobot]
+  - name: Amarey            # [ok] iamarey.com confirmed; Shenzhen Ankobot
+    domain: iamarey.com
+    tier: growth
+    country: CN
+    competitors: [iLife, Eufy]
+  - name: Honiture          # [ok] honiture.com confirmed official store
+    domain: honiture.com
+    tier: growth
+    country: CN
+    competitors: [Neatsvor, Coredy]
+  - name: Levoit            # [verify] Vesync group cross-border brand;
+    domain: levoit.com      # strong mid-range stick vacuum contender
+    tier: growth
+    country: CN
+    competitors: [Shark, Tineco]
+
+  # ============ CN emerging (2023+ / TikTok-driven) ============
+  - name: MOVA              # [ok] Dreame sub-brand, CES 2025 20+ exhibits,
+    domain: mova.co         # "best overall" in overseas reviews - verify domain
+    tier: emerging
+    country: CN
+    competitors: [Dreame, Roborock]
+  - name: Homeika           # [ok] homeika.com confirmed; Helium10 TikTok Shop
+    domain: homeika.com     # top-20 product, $25M+ sales; "Trucozie" T-series
+    tier: emerging          # is the same company's product line, not counted
+    country: CN
+    competitors: [Dyson, Tineco]
+  - name: Fanttik           # [verify] TikTok Shop featured, ~37k units sold
+    domain: fanttik.com
+    tier: emerging
+    country: CN
+    competitors: [Homeika, Eufy]
+  - name: HIZERO           # [verify] CES newcomer, bionic wet cleaning
+    domain: hizero.com
+    tier: emerging
+    country: CN
+    competitors: [Tineco, Narwal]
+  - name: HOTO              # [verify] TikTok Shop vacuum 4.6 rating;
+    domain: null            # TODO: find official domain, excluded from
+    tier: emerging          # citation metrics until then
+    country: CN
+    competitors: [Homeika, Fanttik]
+  # TODO: ~5 more emerging slots - best sourced from FastMoss / Kalodata
+  # TikTok Shop "vacuum & floor care" top-store lists (paid tools, user has access)
+
+  # ============ INTL control group ============
+  - name: iRobot            # [ok] struggling incumbent - great story contrast
+    domain: irobot.com
+    tier: leader
+    country: INTL
+    competitors: [Shark, Roborock]
+    aliases: [Roomba]       # answers often say "Roomba" without "iRobot"
+  - name: Shark             # [ok] TikTok US top vacuum brand
+    domain: sharkclean.com
+    tier: leader
+    country: INTL
+    competitors: [iRobot, Dyson]
+  - name: Dyson             # [ok]
+    domain: dyson.com
+    tier: leader
+    country: INTL
+    competitors: [Shark]
+  - name: Samsung           # [verify] Jet Bot line
+    domain: samsung.com
+    tier: leader
+    country: INTL
+    competitors: [Dyson, iRobot]
+  - name: Bissell           # [ok]
+    domain: bissell.com
+    tier: growth
+    country: INTL
+    competitors: [Shark]
+  - name: Miele             # [verify] premium niche
+    domain: miele.com
+    tier: growth
+    country: INTL
+    competitors: [Dyson, Samsung]
+  - name: Neato             # [verify] defunct 2023 - kept as freshness canary:
+    domain: neatorobotics.com   # "does AI still recommend dead brands?"
+    tier: emerging
+    country: INTL
+    competitors: [iRobot, Roborock]
+  - name: Robotin           # [ok] robotin.com confirmed; Irvine CA startup,
+    domain: robotin.com     # CES 2026 Best of CES, Kickstarter-launched
+    tier: emerging
+    country: INTL
+    competitors: [Roborock, Bissell]

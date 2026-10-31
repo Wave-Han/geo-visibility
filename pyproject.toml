@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geo-visibility"
+version = "0.1.0"
+description = "Measure brand visibility in AI answer engines: two-layer (search-grounded vs memory) benchmarking toolkit"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "httpx>=0.27",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+geo-visibility = "geo_visibility.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["geo_visibility*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
