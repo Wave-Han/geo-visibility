@@ -1,5 +1,7 @@
 # geo-visibility
 
+![tests](https://github.com/Wave-Han/geo-visibility/actions/workflows/tests.yml/badge.svg)
+
 **Measure how brands appear in AI answer engines — reproducibly.**
 
 Buyers increasingly ask ChatGPT, Perplexity, Gemini or DeepSeek before they buy. Teams already track SEO rankings, but few can answer a simpler question: *when someone asks an AI for a recommendation in my category, is my brand mentioned — and how?*
