@@ -4,6 +4,8 @@
 
 **Measure how brands appear in AI answer engines — reproducibly.**
 
+> Also available: [geo-visibility-mcp](https://github.com/Wave-Han/geo-visibility-mcp) — a Java/Spring MCP server exposing the same measurement as agent tools (shared data format).
+
 Buyers increasingly ask ChatGPT, Perplexity, Gemini or DeepSeek before they buy. Teams already track SEO rankings, but few can answer a simpler question: *when someone asks an AI for a recommendation in my category, is my brand mentioned — and how?*
 
 This is a small, tested Python toolkit for measuring that. It asks a configurable set of buyer questions across multiple AI engines, records the raw answers, extracts brand mentions and trust verdicts, and renders an HTML report with per-brand pages.
